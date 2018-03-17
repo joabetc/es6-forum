@@ -1,12 +1,12 @@
-class Person {
-    constructor(name) {
-        this.name = name;
+class FlashMessage {
+    constructor(message) {
+        this.message = message;
     }
 
-    greet() {
-        return `Hello I am ${this.name}`;
+    display() {
+        alert(this.message);
     }
 }
 
-let person = new Person("Tyler");
-console.log(person.greet());
+let flash = new FlashMessage("Hello from ES2015");
+flash.display();
