@@ -7,7 +7,7 @@ let Post = {
             request.open("GET", uri, true);
             request.onload = () => {
                 if (request.status >= 200 && request.status < 400) {
-                    resolve(request.response);
+                    resolve(JSON.parse(request.response));
                 }
             };
 
