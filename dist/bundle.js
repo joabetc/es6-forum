@@ -4,7 +4,17 @@
 var Post = {
     findAll: function findAll() {
         return new Promise(function (resolve, reject) {
-            resolve("ok posts!");
+            var uri = "http://localhost:3000/posts";
+            var request = new XMLHttpRequest();
+
+            request.open("GET", uri, true);
+            request.onload = function () {
+                if (request.status >= 200 && request.status < 400) {
+                    resolve(request.response);
+                }
+            };
+
+            request.send();
         });
     }
 };
