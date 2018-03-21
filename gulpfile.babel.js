@@ -12,4 +12,8 @@ gulp.task("trasnpile", () => {
         .pipe(gulp.dest("dist"));
 });
 
+gulp.task("watch", () => {
+    gulp.watch("src/**/*.js", ["transpile"]);
+});
+
 gulp.task("default", ["transpile"]);
