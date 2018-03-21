@@ -14,6 +14,10 @@ var Post = {
                 }
             };
 
+            request.onerror = function () {
+                reject(new Error("Something went woring on the API"));
+            };
+
             request.send();
         });
     }

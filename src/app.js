@@ -11,6 +11,10 @@ let Post = {
                 }
             };
 
+            request.onerror = () => {
+                reject(new Error("Something went woring on the API"));
+            }
+            
             request.send();
         });
     }
