@@ -16,6 +16,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "babel-core": "^6.26.0"
+    "babel-core": "^6.26.0",
+    "xss-filters": "^1.2.7"
   }
 }
