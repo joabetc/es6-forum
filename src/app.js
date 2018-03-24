@@ -26,4 +26,4 @@ let ui = {
     }
 }
 
-Post.findAll().then(ui.renderPosts);
+Post.findAll().then(ui.renderPosts).catch((error) => console.log(error));
